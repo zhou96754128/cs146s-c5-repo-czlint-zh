@@ -37,7 +37,12 @@ class MessageFileTest(unittest.TestCase):
             path = os.path.join(tmp, "msg.txt")
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write("fix(parser): 修复空指针解引用\n\n补了回归用例。\n")
-            code, out, _ = run(["--file", path])
+            # 显式给配置：--file 模式默认会读所在仓库的 .czlintrc.json，
+            # 本仓库自己的 scope 白名单不含 parser，测试必须自带配置才与环境解耦。
+            cfg_path = os.path.join(tmp, "czlintrc.json")
+            with open(cfg_path, "w", encoding="utf-8") as fh:
+                json.dump({"scopes": ["parser"]}, fh)
+            code, out, _ = run(["--file", path, "--config", cfg_path])
             self.assertEqual(code, EXIT_OK)
             self.assertIn("[OK  ]", out)
 
