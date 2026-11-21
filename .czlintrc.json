@@ -1,0 +1,17 @@
+{
+  "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
+  "scopes": ["cli", "rules", "config", "report", "gitlog", "docs", "ci", "tests"],
+  "scopeRequired": false,
+  "maxSubjectLength": 72,
+  "maxHeaderWidth": 72,
+  "maxBodyLineWidth": 72,
+  "strictMerges": false,
+  "ignoreSubjects": [],
+  "rules": {
+    "R008": "off",
+    "R009": "warn",
+    "R012": "warn",
+    "R014": "warn",
+    "R015": "warn"
+  }
+}

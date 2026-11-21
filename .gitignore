@@ -1,0 +1,16 @@
+# 字节码与缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# 编辑器与系统
+.DS_Store
+.idea/
+.vscode/
+
+# 运行产物
+*.log
+build/
+dist/
