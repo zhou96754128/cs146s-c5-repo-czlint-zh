@@ -1,6 +1,6 @@
 {
   "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
-  "scopes": ["cli", "rules", "config", "report", "gitlog", "docs", "ci", "tests"],
+  "scopes": ["cli", "rules", "config", "report", "gitlog", "docs", "ci", "tests", "repo"],
   "scopeRequired": false,
   "maxSubjectLength": 72,
   "maxHeaderWidth": 72,
